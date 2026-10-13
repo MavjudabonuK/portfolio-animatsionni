@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="uz" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komilova Mavjudabonu | Portfolio</title>
+    <!-- Font Awesome Ikonkalari -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS Fayl -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- Header / Navigatsiya -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-accent">&lt;</span>Mavjudabonu<span class="logo-accent">/&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link" data-i18n="nav_about">Men haqimda</a>
+                <a href="#skills" class="nav-link" data-i18n="nav_skills">Ko'nikmalar</a>
+                <a href="#projects" class="nav-link" data-i18n="nav_projects">Loyihalar</a>
+                <a href="#education" class="nav-link" data-i18n="nav_education">Ta'lim & Yutuqlar</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_contact">Aloqa</a>
+            </nav>
+
+            <div class="nav-controls">
+                <button id="theme-toggle" class="icon-btn" title="Mavzuni o'zgartirish">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+                
+                <div class="lang-dropdown">
+                    <button class="lang-btn" id="lang-btn">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="current-lang">UZ</span>
+                        <i class="fa-solid fa-chevron-down" style="font-size:0.7rem"></i>
+                    </button>
+                    <div class="lang-menu" id="lang-menu">
+                        <button onclick="setLanguage('uz')">🇺🇿 O'zbekcha</button>
+                        <button onclick="setLanguage('en')">🇬🇧 English</button>
+                        <button onclick="setLanguage('ru')">🇷🇺 Русский</button>
+                        <button onclick="setLanguage('ko')">🇰🇷 한국어</button>
+                        <button onclick="setLanguage('zh')">🇨🇳 中文</button>
+                        <button onclick="setLanguage('ja')">🇯🇵 日本語</button>
+                    </div>
+                </div>
+
+                <button class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Bo'limi -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <div class="badge-pill">
+                    <span class="pulse-dot"></span>
+                    <span data-i18n="hero_status">Full-Stack Dasturchi</span>
+                </div>
+                <h1 class="hero-title">
+                    <span data-i18n="hero_hi">Salom, men</span> <br>
+                    <span class="gradient-text">Komilova Mavjudabonu</span>
+                </h1>
+                <p class="hero-slogan" data-i18n="hero_slogan">
+                    G'oyalarni raqamli haqiqatga va mukammal kodga aylantiraman.
+                </p>
+                
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fa-solid fa-rocket"></i> <span data-i18n="btn_projects">Loyihalarim</span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fa-solid fa-paper-plane"></i> <span data-i18n="btn_contact">Bog'lanish</span>
+                    </a>
+                </div>
+
+                <div class="social-links-hero">
+                    <a href="https://t.me/Mavjudabonuu" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://github.com/MavjudabonuK" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://youtube.com/@Komilova_Mavjudabonu" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://instagram.com/sumire.fuji.ren" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://pinterest.com/komilovamavjudabonu" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <!-- 108-qator: Rasm qo'yadigan joy (Shaxsiy rasm) -->
+            <div class="hero-image-wrapper">
+                <div class="avatar-card">
+                    <div class="avatar-frame">
+                        <img id="profile-img" src="photo_2026-10-10_18-28-05.jpg" alt="Komilova Mavjudabonu">
+                    </div>
+                    <div class="floating-badge badge-1">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Backend Dev</span>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <i class="fa-brands fa-js"></i>
+                        <span>Frontend Dev</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Men Haqimda -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about_title">Men haqimda</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fa-solid fa-user-astronaut card-icon"></i>
+                    <p data-i18n="about_bio">
+                        Men Komilova Mavjudabonu, 2011-yil 9-aprelda tug'ilganman. Axborot texnologiyalari va dasturlash sohasida 3 yildan beri doimiy izlanishdaman. 💜 Anime ko'rishni va yangi texnologiyalarni o'rganishni yaxshi ko'raman.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <i class="fa-solid fa-bullseye card-icon"></i>
+                    <p data-i18n="about_goal">
+                        Mening maqsadim — Full-Stack (Backend & Frontend) yo'nalishida zamonaviy, tezkor hamda xavfsiz dasturiy yechimlarni yaratish va xalqaro loyihalarda faol ishtirok etish.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ko'nikmalar -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills_title">Ko'nikmalar</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fa-brands fa-python skill-icon python"></i>
+                    <h3>Python</h3>
+                    <p data-i18n="skill_py_desc">Telegram botlar, algoritmlar va backend mantiq</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-html5 skill-icon html"></i>
+                    <h3>HTML5 & CSS3</h3>
+                    <p data-i18n="skill_html_desc">Responsiv va moslashuvchan veb-sahifalar</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-js skill-icon js"></i>
+                    <h3>JavaScript</h3>
+                    <p data-i18n="skill_js_desc">Interaktiv va dinamik veb elementlar</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-figma skill-icon figma"></i>
+                    <h3>Figma & Design</h3>
+                    <p data-i18n="skill_figma_desc">UI/UX maketlar va grafik dizayn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loyihalar -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects_title">Loyihalar</h2>
+            <div class="projects-grid">
+                
+                <!-- 180-qator: So'z topish o'yini rasmini qo'yadigan joy -->
+                <div class="project-card">
+                    <img src="soz_topish.png" alt="So'z Topish O'yini" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+                    <div class="project-header">
+                        <i class="fa-solid fa-gamepad project-icon"></i>
+                        <span class="project-tag">Python / CLI</span>
+                    </div>
+                    <h3>So'z Topish O'yini</h3>
+                    <p data-i18n="proj1_desc">Qiziqarli So'z topish o'yini va turli xil mantiqiy py papkalar to'plami.</p>
+                    <div class="project-logic">
+                        <div><strong>Muammo:</strong> Mantiqiy o'yinlar va tayyor koding namunasi kamligi.</div>
+                        <div><strong>Yechim:</strong> Interaktiv so'z topish o'yin algoritmi va skriptlar.</div>
+                    </div>
+                    <a href="https://github.com/MavjudabonuK/soz_topish_oyini_va_qiziqarlipy_papkalar.git" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                        <i class="fa-brands fa-github"></i> GitHub Havolasi
+                    </a>
+                </div>
+
+                <!-- 198-qator: Son topish o'yini rasmini qo'yadigan joy -->
+                <div class="project-card">
+                    <img src="son_topish.png" alt="Son Topish O'yini" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+                    <div class="project-header">
+                        <i class="fa-solid fa-arrow-up-9-1 project-icon"></i>
+                        <span class="project-tag">Python</span>
+                    </div>
+                    <h3>Son Topish O'yini</h3>
+                    <p data-i18n="proj2_desc">Kompyuter va foydalanuvchi o'rtasidagi mantiqiy va interaktiv son topish o'yini.</p>
+                    <div class="project-logic">
+                        <div><strong>Muammo:</strong> Kompyuter bilan muloqot qiluvchi o'yin mantiqi.</div>
+                        <div><strong>Yechim:</strong> Ehtimollarni hisoblaydigan o'yin algoritmi.</div>
+                    </div>
+                    <a href="https://github.com/MavjudabonuK/Son_topish_o-yini.git" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                        <i class="fa-brands fa-github"></i> GitHub Havolasi
+                    </a>
+                </div>
+
+                <!-- 216-qator: Telegram bot rasmini qo'yadigan joy -->
+                <div class="project-card">
+                    <img src="telegram_bot.png" alt="Final Telegram Bot" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+                    <div class="project-header">
+                        <i class="fa-solid fa-robot project-icon"></i>
+                        <span class="project-tag">Telegram Bot</span>
+                    </div>
+                    <h3>Final Telegram Bot</h3>
+                    <p data-i18n="proj3_desc">Keng imkoniyatlarga ega, foydalanuvchilarga xizmat ko'rsatuvchi Telegram bot.</p>
+                    <div class="project-logic">
+                        <div><strong>Muammo:</strong> Foydalanuvchi xabarlarini avtomatlashtirish.</div>
+                        <div><strong>Yechim:</strong> Asinxron Python Telegram bot tizimi.</div>
+                    </div>
+                    <a href="https://github.com/MavjudabonuK/final_telegram_bot.git" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                        <i class="fa-brands fa-github"></i> GitHub Havolasi
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Ta'lim va Yutuqlar (Barcha avvalgi va yangi yutuqlar) -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="education_title">Ta'lim va Yutuqlar</h2>
+            <div class="timeline">
+                
+                <!-- 1. Yangi: Kelajak Kasblari tanlovi -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Yaqinda</span>
+                        <h3 data-i18n="ach_1_title">🏆 "Kelajak Kasblari" Tanlovi — 2-O'rin</h3>
+                        <p data-i18n="ach_1_desc">Grafik dizayn yo'nalishida faxrli 2-o'rinni egallab, maxsus Diplom bilan taqdirlandim.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Yangi: Coursera Meta Front-End Developer -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Coursera / Meta</span>
+                        <h3 data-i18n="ach_2_title">📜 Meta Front-End Developer Sertifikati</h3>
+                        <p data-i18n="ach_2_desc">Coursera platformasida Meta tomonidan taqdim etilgan professional front-end dasturlash kursini muvaffaqiyatli tamomladim.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Avvalgi: IT & Dasturlash tajribasi -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - Hozirgacha</span>
+                        <h3 data-i18n="ach_3_title">💻 IT & Dasturlash (3 Yil Tajriba)</h3>
+                        <p data-i18n="edu_desc1">Python, Telegram botlar, HTML/CSS, JS hamda murakkab algoritmlarni amaliy o'rganish.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Avvalgi: Maktab ta'limi -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Xorazm, Xiva</span>
+                        <h3 data-i18n="ach_4_title">🏫 Maktab Ta'limi</h3>
+                        <p data-i18n="edu_desc2">O'zbekiston, Xiva shahri. A'lo baholar va fan olimpiadalari ishtirokchisi.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Aloqa -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact_title">Aloqa</h2>
+            <div class="contact-grid">
+                
+                <div class="contact-info">
+                    <a href="tel:+998339778089" class="contact-card-link">
+                        <div class="contact-card">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p>+998 33 977 80 89</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="mailto:komilovamavjudabonu@gmail.com" class="contact-card-link">
+                        <div class="contact-card">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>komilovamavjudabonu@gmail.com</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="contact-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Joylashuv</h4>
+                            <p>O'zbekiston, Xiva</p>
+                        </div>
+                    </div>
+
+                    <div class="social-badges">
+                        <a href="https://t.me/Mavjudabonuu" target="_blank" rel="noopener noreferrer" class="s-badge telegram">
+                            <i class="fa-brands fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="s-badge discord">
+                            <i class="fa-brands fa-discord"></i> mavjudabonu
+                        </a>
+                        <a href="https://www.roblox.com/users/flotershay_555" target="_blank" rel="noopener noreferrer" class="s-badge roblox">
+                            <svg class="roblox-svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M5.16 0L0 18.84 18.84 24 24 5.16 5.16 0zm9.48 14.52l-4.2-1.14 1.14-4.2 4.2 1.14-1.14 4.2z"/></svg> Roblox
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <input type="text" placeholder="Ismingiz" required>
+                    <input type="email" placeholder="Emailingiz" required>
+                    <textarea rows="4" placeholder="Xabaringiz..." required></textarea>
+                    <button type="submit" class="btn btn-primary" data-i18n="btn_send">Yuborish</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Komilova Mavjudabonu. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <!-- JS Fayl -->
+    <script src="script.js"></script>
+</body>
+</html>
